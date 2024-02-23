@@ -18,7 +18,7 @@ async function authenticate(mode, email, password) {
     { headers: { 'x-api-key': `${API_KEY}` } }
   );
 
-  const token = response.data.tokens.accessToken;
+  const token = response.data.metadata.tokens.accessToken;
   console.log(token);
   return token;
 }
